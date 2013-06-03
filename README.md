@@ -1,7 +1,7 @@
 p1-java-metering
 ================
 
-P1 Java Metering
+This is a client library written in Java enabling a connection to (dutch) smart meters.
 
 The P1 meter delivers datagrams like these every 10 seconds:
 
@@ -27,3 +27,39 @@ The P1 meter delivers datagrams like these every 10 seconds:
 (00034.998)
 0-1:24.4.0(1)
 ```
+
+This library uses the GNU RXTXComm library to perform serial communication with the smart meter.
+
+Feel free to fork and improve the code!
+
+
+usage
+=====
+
+Hook this library into your application like so:
+
+```java
+// Instantiate the listener
+SmartMeterListener smartMeterListener = new SmartMeterListenerImpl();
+...
+// Periodically read the values
+SmartMeterMeasurement smartMeterMeasurement = smartMeterListener.getCurrentMeasurement();
+```
+
+This library is built with Maven. To include it in your project add the following repository and dependency:
+
+```xml
+<repository>
+    <id>boplicity.nl</id>
+    <name>boplicity snapshots</name>
+    <url>https://boplicity.nl/nexus/content/repositories/snapshots/</url>
+</repository>
+
+<dependency>
+    <groupId>org.boplicity</groupId>
+    <artifactId>mastervolt-java-metering</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+
+Or check out the code and install it in your local repository using ```mvn install```
