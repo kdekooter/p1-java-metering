@@ -58,7 +58,7 @@ This library is built with Maven. To include it in your project add the followin
 <dependency>
     <groupId>org.boplicity</groupId>
     <artifactId>p1-java-metering</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
 </dependency>
 ```
 
