@@ -32,6 +32,15 @@ This library uses the GNU RXTXComm library to perform serial communication with 
 
 Feel free to fork and improve the code!
 
+linux configuration
+===================
+
+`sudo apt-get install librxtx-java`
+
+Make sure to put the native stuff in the library path:
+
+`JAVA_OPTS=-Djava.library.path=/usr/lib/jni`
+
 
 usage
 =====
@@ -63,3 +72,9 @@ This library is built with Maven. To include it in your project add the followin
 ```
 
 Or check out the code and install it in your local repository using ```mvn install```
+
+permissions
+===========
+Make sure you've got proper permissions to read from the USB port:
+
+`sudo chmod 666 /dev/ttyUSB0 `
