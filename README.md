@@ -75,6 +75,4 @@ Or check out the code and install it in your local repository using ```mvn insta
 
 permissions
 ===========
-Make sure you've got proper permissions to read from the USB port:
-
-`sudo chmod 666 /dev/ttyUSB0 `
+Make sure add the user running the software to the `dialout` group.
